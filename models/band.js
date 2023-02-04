@@ -38,12 +38,14 @@ module.exports = (sequelize, DataTypes) => {
     end_time: {
       type: DataTypes.DATE,
       allowNull: false
-    }, 
+    }
+  }, {
 
-      sequelize,
-      modelName: 'band',
-      timestamps: false
-  });
-  
-  return Band;
+    sequelize,
+    modelName: 'Band',
+    tableName: 'bands',
+    timestamps: false
+  })
+
+  return Band
 }

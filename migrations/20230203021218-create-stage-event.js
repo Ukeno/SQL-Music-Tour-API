@@ -17,14 +17,6 @@ module.exports = {
       },
       event_id: {
         type: Sequelize.SMALLINT
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
     });
   },

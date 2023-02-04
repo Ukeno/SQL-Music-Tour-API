@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 const {
   Model
 } = require('sequelize');
@@ -14,20 +14,20 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Stage.init({
-      stage_id: {
-          type: DataTypes.INTEGER,
-          primaryKey: true,
-          autoIncrement: true
-      },
+    stage_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     stage_name: {
-        type: DataTypes.STRING,
-        allowNull: false
-      }, 
-      
+      type: DataTypes.STRING,
+      allowNull: false
+    }
+  }, {
     sequelize,
-      modelName: 'stage',
+    modelName: 'Stage',
+    tableName: 'stages',
     timestamps: false
-  });
-    
-  return Stage;
+  })
+  return Stage
 }
