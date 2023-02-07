@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const { Sequelize } = require('sequelize')
-// const band = require('./controllers/band_controller')
+const bands = require('./controllers/bands_controller')
 
 // CONFIGURATION / MIDDLEWARE
 require('dotenv').config()
@@ -16,9 +16,9 @@ app.get('/', (req, res) => {
     })
 })
 
-// CONTROLLERS  // Erroring
-const bandController = require('./controllers/band_controller')
-app.use('/api/band', bandController)
+// CONTROLLERS 
+const bandsController = require('./controllers/bands_controller')
+app.use('/bands', bandsController)
 
 // LISTEN
 app.listen(process.env.PORT, () => {
