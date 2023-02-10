@@ -1,8 +1,7 @@
-'use strict';
+'use strict'
 
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('bands', [{
       name: 'The Useful Books',
       genre: 'Rock',
@@ -11,7 +10,7 @@ module.exports = {
     }])
   },
 
-  async down (queryInterface, Sequelize) {
+  down: async (queryInterface, Sequelize) => {
     // note that this deletes ALL data from the bands table
     await queryInterface.bulkDelete('bands', null, {})
   }
